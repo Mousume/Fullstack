@@ -182,3 +182,39 @@
     border-right-color: var(--border);
   }
 }
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #18302b;
+  background: #e9f0e9;
+}
+
+body { min-width: 320px; background: #e9f0e9; }
+#root { width: 100%; max-width: 1040px; border: 0; display: block; text-align: left; }
+.app-shell { margin: 0 auto; padding: 72px 28px; }
+.intro { max-width: 620px; margin-bottom: 44px; }
+.eyebrow { color: #c65c36; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.app-shell h1, .app-shell h2 { font-family: 'Space Grotesk', sans-serif; color: #18302b; margin: 0; }
+.app-shell h1 { font-size: clamp(48px, 8vw, 86px); line-height: 0.95; letter-spacing: -2px; }
+.app-shell h2 { font-size: 23px; }
+.description { font-size: 18px; line-height: 1.5; color: #557069; }
+.workspace { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1.2fr); gap: 22px; }
+.user-form, .user-list { background: #fffdf7; border: 1px solid #c8d8cb; border-radius: 8px; padding: 28px; box-shadow: 8px 8px 0 #c8d8cb; }
+.user-form { display: grid; gap: 16px; align-content: start; }
+.user-form label { display: grid; gap: 7px; color: #557069; font-size: 14px; font-weight: 700; }
+.user-form input { width: 100%; border: 1px solid #a9c0b1; border-radius: 5px; padding: 12px; color: #18302b; background: #f4f8f1; font: inherit; }
+.user-form input:focus { outline: 2px solid #c65c36; outline-offset: 2px; }
+.user-form button { border: 0; border-radius: 5px; padding: 13px 16px; color: #fffdf7; background: #c65c36; font: inherit; font-weight: 700; cursor: pointer; }
+.user-form button:hover { background: #a94727; }
+.message { color: #557069; font-size: 14px; }
+.list-heading { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dbe5dc; padding-bottom: 16px; }
+.list-heading span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #dcebdc; font-weight: 700; }
+.user-list ul { list-style: none; padding: 0; margin: 0; }
+.user-list li { display: flex; flex-direction: column; gap: 3px; padding: 16px 0; border-bottom: 1px solid #dbe5dc; }
+.user-list li:last-child { border-bottom: 0; }
+.user-list li span, .empty-state { color: #557069; }
+
+@media (max-width: 700px) {
+  .app-shell { padding: 42px 20px; }
+  .workspace { grid-template-columns: 1fr; }
+}
